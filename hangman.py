@@ -106,6 +106,7 @@ class GUI(object):
             self.canvas.image = ImageTk.PhotoImage(im)
             self.canvas.create_image(140, 180, image=self.canvas.image)
             if self.stage == 6:
+                self.secret_lb["text"] = " ".join(secret_word_chars)
                 self.game_over = True
                 self.check_game_ended()
         else:
